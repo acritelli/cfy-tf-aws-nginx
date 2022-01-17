@@ -10,13 +10,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      # - name: Install or Update EaaS
-      #   uses: jrzeszutek/install-or-update-action@v1.2.1
-      #   with:
-      #     environment-name: $EAAS_DEPLOYMENT_ID
-      #     blueprint-id: $EAAS_BLUEPRINT_ID
-      #     delete-old-blueprint: false
-      #     inputs-file: ".github/inputs/inputs.yaml"
       - name: Update Terraform
         uses: cloudify-cosmo/execute-workflow-action@v1.1
         with:
@@ -29,6 +22,5 @@ env:
   CLOUDIFY_USERNAME: ${{ secrets.CLOUDIFY_USERNAME }}
   CLOUDIFY_PASSWORD: ${{ secrets.CLOUDIFY_PASSWORD }}
   CLOUDIFY_TENANT: ${{ secrets.CLOUDIFY_TENANT }}
-  EAAS_BLUEPRINT_ID: ${{ secrets.EAAS_BLUEPRINT_ID }}
   AWS_DEPLOYMENT_ID: ${{ secrets.AWS_DEPLOYMENT_ID }}
   CLOUDIFY_SSL: ${{ secrets.CLOUDIFY_SSL }}
