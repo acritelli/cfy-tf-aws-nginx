@@ -1,4 +1,4 @@
-name: Update-cloudify
+name: Reload Terraform
 on:
   push:
     branches: [ main ]
