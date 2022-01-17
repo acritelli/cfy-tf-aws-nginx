@@ -38,8 +38,6 @@ resource "aws_instance" "example_vm" {
 
   tags = {
     created-by = "cloudify"
-    owner      = "acritelli"
-    team       = "syseng"
   }
 }
 
