@@ -39,6 +39,7 @@ resource "aws_instance" "example_vm" {
   tags = {
     created-by = "cloudify"
     name = "test-instance"
+    test = "tagval"
   }
 }
 
