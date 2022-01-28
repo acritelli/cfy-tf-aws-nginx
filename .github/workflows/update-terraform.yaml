@@ -1,5 +1,6 @@
 name: Reload Terraform
 on:
+  workflow_dispath:
   push:
     branches: [ main ]
     paths:
