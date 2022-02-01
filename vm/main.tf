@@ -37,7 +37,7 @@ resource "aws_instance" "example_vm" {
   subnet_id = var.subnet_id
 
   tags = {
-    created-by = "cloudify"
+    created-by = "cloudify-demo"
   }
 }
 
